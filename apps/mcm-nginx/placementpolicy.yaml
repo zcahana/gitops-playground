@@ -1,0 +1,13 @@
+apiVersion: mcm.ibm.com/v1alpha1
+kind: PlacementPolicy
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      region: US
+  resourceHint:
+    type: cpu

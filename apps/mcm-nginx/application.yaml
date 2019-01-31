@@ -1,0 +1,16 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  componentKinds:
+  - group: core
+    kind: Service
+  - group: apps
+    kind: Deployment
+    

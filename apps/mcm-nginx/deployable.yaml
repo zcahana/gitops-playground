@@ -1,0 +1,12 @@
+apiVersion: mcm.ibm.com/v1alpha1
+kind: Deployable
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  deployer:
+    kind: helm
+    helm:
+      chartURL: https://github.com/IBM/charts/raw/master/repo/stable/ibm-nginx-dev-1.0.1.tgz
+      namespace: default
